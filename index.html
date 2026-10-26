@@ -31,14 +31,34 @@
         <!-- Concept Explanation -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
             <h2 class="text-md font-semibold text-slate-900 mb-2 flex items-center gap-2">
-                <i class="fa-solid fa-lightbulb text-amber-500"></i> なぜこの構成にするのか？
+                <i class="fa-solid fa-lightbulb text-amber-500"></i> なぜこの構成にするのか？ ＆ 進め方の目安
             </h2>
             <p class="text-xs text-slate-600 leading-relaxed mb-3">
                 学生の中には、「日常生活の単なるモヤモヤ」を抱えている場合と、「これって研究のネタになるかも？」という仮説からスタートする場合があります。そのため、<strong>「研究になりそうと感じている点」を上位に置き、どちらか一方だけでも入力が成立する</strong>柔軟な設計にしています。
             </p>
-            <p class="text-xs text-slate-600 leading-relaxed">
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 また、<strong>「それによって一体『誰が得をするのか（受益者・新しい体験の提供先）』」</strong>を問うことで、個人のわがままで終わらせず、社会的・学術的な意義の輪郭を浮き彫りにします。
             </p>
+
+            <!-- Transition Guidelines Box -->
+            <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-indigo-50/50 p-4 rounded-lg border border-indigo-100">
+                    <h4 class="text-xs font-bold text-indigo-900 mb-1.5 flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrow-right text-indigo-600"></i> Step A（原案・壁打ち）へ進むタイミング
+                    </h4>
+                    <p class="text-[11px] text-slate-600 leading-relaxed">
+                        AIとの対話を通じて「こういう問い（RQ）にできそう」「受益者と解決の軸が見えてきた」と霧が晴れてきたら、本格的な計画づくりである<a href="https://yoshiakai.github.io/research_prompt_generator/" target="_blank" class="text-indigo-600 underline font-medium hover:text-indigo-800">Step Aツール</a>へ進んでください。
+                    </p>
+                </div>
+                <div class="bg-amber-50/50 p-4 rounded-lg border border-amber-100">
+                    <h4 class="text-xs font-bold text-amber-900 mb-1.5 flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate-left text-amber-600"></i> Step 0 へ戻ってくるタイミング
+                    </h4>
+                    <p class="text-[11px] text-slate-600 leading-relaxed">
+                        Step Aで文献調査や壁打ちを進める中で、「やっぱりそもそも問いの立て方や受益者が曖昧だったな…」と迷子になったときは、いつでもこのStep 0に戻って原点を見直してください。
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!-- Input Form Section -->
@@ -112,9 +132,9 @@
             const field = document.getElementById('fieldSelect0').options[document.getElementById('fieldSelect0').selectedIndex].text;
 
             const promptText = `あなたは優秀なアカデミック・メンターであり、学生の「これが研究になるのか分からない」という戸惑いや日常の違和感を「研究のタネ」に昇華させ、その社会的・学術的意義（誰が得をするのか）を問い直すソクラテス式の壁打ち相手です。
-現在、まだ研究テーマが固まっていない学生が、自分のアイデアやモヤモヤを学術的な「問い（リサーチクエスチョン）」に翻訳する手前の段階にいます。
+現在、まだ研究テーマが固まっていない学生が、自分のアイデアやモヤモヤを学術的な上の「問い（リサーチクエスチョン）」に翻訳する手前の段階にいます。
 
-以下の【学生の入力原案】をもとに、**絶対に最初から完成された研究テーマや答えを押し付けず、学生本人が「本当に研究になるか」「誰にどんな価値をもたらすか（受益者視点）」を意識しながら思考を深められるような「問い返し（対話）」を行ってください。**（※入力項目のどちらか一方が未入力であっても柔軟に受け付けてください）
+以下の【学生の入力原案】をもとに、**絶対に最初から完成された研究テーマや答えを押し付けず、学生本人が「本当に研究になるか」「誰にどんな価値をもたらすか（受益者視点）」を意識しながら思考を深められるような「問い返し（対話）」を行ってください。**（※入力項目のどちらか一方が未入力であっても柔軟に受け止めてください）
 
 ---
 ### 【前提条件】
@@ -140,7 +160,7 @@
 ### 【最初の出力内容】
 まずは温かいトーンで迎え入れた上で、以下の構成で最初の返答をしてください。
 1. 学生の「これが研究になるかという迷い」やモヤモヤの中に潜む「研究としての面白さの原石」を1つだけ言語化する。
-2. それを学術的・デザイン的に探求するための「切り口（レンズ候補）」を20（2つほど）提示する。
+2. それを学術的・デザイン的に探求するための「切り口（レンズ候補）」を2つほど提示する。
 3. 受益者の解像度をさらに上げるため、または研究への接続を明確にするための**【短い質問（最大2点）】**を投げかけ、学生からの返答を待つ。
 
 それでは、対話を開始してください。`;
